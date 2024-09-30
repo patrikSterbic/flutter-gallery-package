@@ -72,6 +72,12 @@ class _GalleryImageViewWrapperState extends State<GalleryImageViewWrapper> {
       appBar: widget.showAppBar
           ? AppBar(
               title: Text(widget.titleGallery ?? "Gallery"),
+              leading: IconButton(
+                icon: Icon(Icons.close),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
             )
           : null,
       backgroundColor: widget.backgroundColor,
